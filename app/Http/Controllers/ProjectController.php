@@ -52,6 +52,7 @@ class ProjectController extends Controller
         $data = $request->validated();
         /** @var  $image \Illuminate\Http\UploadedFile */
         $image = $data['image'] ?? null;
+        $data['created_by'] = Auth::id();
         $data['updated_by'] = Auth::id();
 
         if($image){
@@ -101,7 +102,6 @@ class ProjectController extends Controller
         $data = $request->validated();
         /** @var  $image \Illuminate\Http\UploadedFile */
         $image = $data['image'] ?? null;
-        $data['created_by'] = Auth::id();
         $data['updated_by'] = Auth::id();
 
         if($image){
