@@ -12,7 +12,6 @@ export default function Show({auth, project, tasks, queryParams}) {
                     <h2 className="font-semibold text-xl text-gray-800 dark:text-gray200 leading-tight">
                         {`Project "${project.name}"`}
                     </h2>
-                    <Link href={route("project.create")} className="bg-emerald-500 py-1 px-3 text-white rounded shadow transition-all hover:bg-emerald-600"> Add New </Link>
                 </div>
             }
         >
